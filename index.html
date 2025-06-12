@@ -49,7 +49,18 @@
   z-index: 0;
   border-radius: 12px;
 }
-
+.nama-teks {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 24px;
+  font-weight: bold;
+  color: #5e3d30;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  z-index: 4;
+}
 .bunga {
   position: absolute;
   width: 90px;
@@ -84,10 +95,11 @@
   <button onclick="generateBuket()">Buat Bunga</button>
   <button onclick="simpanGambar()">Simpan</button>
 
-  <div class="buket" id="buket">
-    <img src="background-cream.png" class="background-buket" alt="Background">
-    <img src="pot.png" class="pot" alt="Pot">
-  </div>
+<div class="buket" id="buket">
+  <img src="background-cream.png" class="background-buket" alt="Background">
+  <img src="pot.png" class="pot" alt="Pot">
+  <div id="namaTeks" class="nama-teks"></div>
+</div>
 
   <div class="watermark">bysnaa.id</div>
 
@@ -103,22 +115,22 @@
       H: "gambar h.png",
       I: "gambar i.png",
       J: "gambar j.png",
-      K: "GAMBAR K.png",
-      L: "GAMBAR L.png",
-      M: "GAMBAR M.png",
-      N: "GAMBAR N.png",
+      K: "gambar k.png",
+      L: "gambar l.png",
+      M: "gambar m.png",
+      N: "gambar n.png",
       O: "GAMBAR O.png",
-      P: "GAMBAR P.png",
-      Q: "GAMBAR Q.png",
-      R: "GAMBAR R.png",
-      S: "GAMBAR S.png",
-      T: "GAMBAR T.png",
-      U: "GAMBAR U.png",
-      V: "GAMBAR V.png",
-      W: "GAMBAR W.png",
-      X: "GAMBAR X.png",
-      Y: "GAMBAR Y.png",
-      Z: "GAMBAR Z.png"
+      P: "gambar p.png",
+      Q: "gambar q.png",
+      R: "gambar r.png",
+      S: "gambar s.png",
+      T: "gambar t.png",
+      U: "gambar u.png",
+      V: "gambar v.png",
+      W: "gambar w.png",
+      X: "gambar x.png",
+      Y: "gambar y.png",
+      Z: "gambar z.png"
     };
 
     function getRotation(index) {
@@ -148,7 +160,13 @@
             img.style.opacity = 1;
           }, delay);
           delay += 300;
+          const namaTeks = document.getElementById("namaTeks");
+          namaTeks.textContent = name;
+          namaTeks.style.opacity = 0;
 
+          setTimeout(() => {
+          namaTeks.style.opacity = 1;
+          }, 200);
           buket.appendChild(img);
         }
       }
