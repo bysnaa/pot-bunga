@@ -31,8 +31,8 @@
     .buket {
   position: relative;
   width: 100%;
-  max-width: 950px; /* Atur lebar maksimal sesuai rasio 19:6 */
-  aspect-ratio: 19 / 6;
+  max-width: 400px; /* Sesuaikan agar tidak terlalu lebar di layar */
+  aspect-ratio: 9 / 16;
   margin: 60px auto 0 auto;
   display: flex;
   justify-content: center;
@@ -56,7 +56,7 @@
   opacity: 0;
   transform-origin: bottom center;
   transition: opacity 0.5s ease-in-out;
-  top: 45%; /* agar titik pangkal bunga tepat di tengah background */
+  bottom: 25%; /* Posisikan agak di atas pot */
   left: 50%;
   transform: translateX(-50%);
   z-index: 2;
