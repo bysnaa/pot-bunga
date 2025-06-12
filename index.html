@@ -57,18 +57,23 @@
   transform-origin: bottom center;
   transition: opacity 0.5s ease-in-out;
   top: 45%; /* agar titik pangkal bunga tepat di tengah background */
-  left: 50%;
-  transform: translateX(-50%);
+  left: 30%;
+  transform: translateX(-40%);
   z-index: 2;
 }
 
 .pot {
   position: absolute;
-  bottom: 5%;
-  left: 50%;
+  bottom: -10px;
+  left: 110px;
   transform: translateX(-50%);
   width: 80px;
   z-index: 3;
+}
+.watermark{
+  margin-top:20px;
+  font-size:14px
+  color:#aaa;
 }
 
   </style>
@@ -84,7 +89,7 @@
     <img src="pot.png" class="pot" alt="Pot">
   </div>
 
-  <div class="watermark">by snaa</div>
+  <div class="watermark">bysnaa.id</div>
 
   <script>
     const flowerMap = {
